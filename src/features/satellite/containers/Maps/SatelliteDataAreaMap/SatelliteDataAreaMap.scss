@@ -1,0 +1,36 @@
+@import "src/config/theme/theme";
+@import "src/assets/scss/functions/functions";
+
+.satellite-data-area-map {
+  height: 100%;
+
+  .mapboxgl-canvas-container {
+    height: 100%;
+    width: 100%;
+  }
+
+  .mapboxgl-canvas {
+    //width: 100% !important;
+    //height: 100% !important;
+    //object-fit: cover;
+    position: unset;
+  }
+
+  &--no-georeferences {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & > * {
+      visibility: hidden;
+    }
+
+    &::after {
+      content: attr(data-intl-no-georeference);
+      text-transform: uppercase;
+      color: get($theme, ("palette", "primary", "main"));
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+  }
+}

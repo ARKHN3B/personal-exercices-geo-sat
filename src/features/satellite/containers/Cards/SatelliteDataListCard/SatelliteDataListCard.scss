@@ -1,0 +1,30 @@
+@import "../../../../../config/theme/theme";
+@import "../../../../../assets/scss/functions/functions";
+
+.satellite-data-list-card {
+  &__material-table {
+    &-container {
+      & > *:not(:first-child) {
+        margin-top: 15px;
+      }
+
+      & > .MuiToolbar-root {
+        padding-inline: get($theme, ("spacing", "sm"));
+      }
+
+      .MuiTableCell-footer {
+        border-bottom: unset;
+      }
+    }
+
+    &-overlay-loading {
+      width: 100%;
+      height: 100%;
+      background-color: hsla(0, 0%, 100%, 0.50);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 07734;
+    }
+  }
+}

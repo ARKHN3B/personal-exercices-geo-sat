@@ -1,0 +1,163 @@
+@import "src/config/theme/theme";
+@import "src/assets/scss/functions/functions";
+
+.button {
+	$primary: get($theme, ("palette", "primary", "main"));
+
+	border-radius: 5px;
+	border: unset;
+	padding: 0.5rem 1.3rem;
+	font-size: 0.85rem;
+	font-weight: 500;
+	cursor: pointer;
+	transition: all 200ms ease-in-out;
+
+	&--small {
+		padding: 0.6rem 1.5rem;
+		border-radius: 5px;
+		font-size: 0.85rem;
+	}
+
+	&--large {
+		padding: 1.3rem 3.5rem;
+		font-size: 0.95rem;
+		border-radius: 10px;
+	}
+
+	&--circled {
+		border-radius: 50%;
+		padding: 2rem 2rem;
+	}
+
+	&--rounded {
+		border-radius: 1000px;
+	}
+
+	// Primary importance style
+	&--primary-importance {
+		&.button--primary,
+		&.button--info,
+		&.button--danger,
+		&.button--warning,
+		&.button--success {
+			color: white;
+		}
+
+		&.button--primary {
+			background-color: $primary;
+		}
+
+		//&.button--info {
+		//	background-color: $info;
+		//
+		//	&:hover {
+		//		background-color: darken($info, 1%);
+		//	}
+		//}
+		//
+		//&.button--danger {
+		//	background-color: $danger;
+		//
+		//	&:hover {
+		//		background-color: darken($danger, 10%);
+		//	}
+		//}
+		//
+		//&.button--warning {
+		//	background-color: $warning;
+		//
+		//	&:hover {
+		//		background-color: darken($warning, 1%);
+		//	}
+		//}
+		//
+		//&.button--success {
+		//	background-color: $success;
+		//
+		//	&:hover {
+		//		background-color: darken($success, 5%);
+		//	}
+		//}
+	}
+
+	// Secondary and Tertiary importance style
+	&--secondary-importance,
+	&--tertiary-importance {
+		&.button--primary {
+			color: $primary;
+		}
+
+		//&.button--info {
+		//	color: $info;
+		//}
+		//
+		//&.button--danger {
+		//	color: $danger;
+		//}
+		//
+		//&.button--warning {
+		//	color: $danger;
+		//}
+		//
+		//&.button--success {
+		//	color: $success;
+		//}
+	}
+
+	// Secondary importance style
+	&--secondary-importance {
+		&.button--primary {
+			background-color: lighten($primary, 35%);
+
+			&:hover {
+				background-color: lighten($primary, 32%);
+			}
+		}
+
+		//&.button--info {
+		//	background-color: lighten($info, 35%);
+		//
+		//	&:hover {
+		//		background-color: lighten($info, 32%);
+		//	}
+		//}
+		//
+		//&.button--danger {
+		//	background-color: lighten($danger, 35%);
+		//
+		//	&:hover {
+		//		background-color: lighten($danger, 32%);
+		//	}
+		//}
+		//
+		//&.button--warning {
+		//	background-color: lighten($warning, 35%);
+		//
+		//	&:hover {
+		//		background-color: lighten($warning, 32%);
+		//	}
+		//}
+		//
+		//&.button--success {
+		//	background-color: lighten($success, 35%);
+		//
+		//	&:hover {
+		//		background-color: lighten($success, 32%);
+		//	}
+		//}
+	}
+
+	// Tertiary importance style
+	&--tertiary-importance {
+		background-color: transparent;
+
+		&:hover {
+			background-color: hsla(0, 0%, 0%, 0.03);
+		}
+	}
+
+	&[disabled] {
+		background-color: #b3b3b3; // Old browsers
+		cursor: not-allowed;
+	}
+}

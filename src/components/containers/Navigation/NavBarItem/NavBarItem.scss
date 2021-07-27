@@ -1,0 +1,26 @@
+@import "src/config/theme/theme";
+@import "src/assets/scss/functions/functions";
+@import "src/assets/scss/mixins/mixins";
+
+.nav-bar-item {
+  @include equalHeightWidth(50px);
+  padding: 15px; // Set the content
+  position: relative;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: #f6f6f6;
+  }
+
+  &--selected {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-right: 6px solid get($theme, ("palette", "primary", "main"));
+      height: 100%;
+    }
+  }
+}

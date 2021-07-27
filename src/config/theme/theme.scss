@@ -1,0 +1,7 @@
+@import "src/config/theme/palette";
+@import "src/config/theme/spacing";
+
+$theme: (
+  "palette": $palette,
+  "spacing": $spacing,
+);

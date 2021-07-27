@@ -1,0 +1,19 @@
+{
+  "show bubble graph": "Afficher un graphique en bulle",
+  "date": "Date",
+  "image name": "Nom de l'image",
+  "region name": "Nom de la région",
+  "country name": "Nom du pays",
+  "clouds percentage": "% de nuages",
+  "snow percentage": "% de neige",
+  "urban buildings percentage": "% de buildings",
+  "actions": "Actions",
+  "satellite data": "Données satellitaires",
+  "show visual rendering": "Afficher le rendu visuel",
+  "hide visual rendering": "Cacher le rendu visuel",
+  "show on map": "Montrer sur la carte",
+  "no georeferences": "Pas de géoréférences trouvées",
+  "search": "Rechercher",
+  "line": "ligne",
+  "line_plural": "lignes"
+}

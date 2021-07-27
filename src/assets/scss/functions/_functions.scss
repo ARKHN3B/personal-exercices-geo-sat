@@ -1,0 +1,18 @@
+@use "sass:map";
+@use "sass:list";
+
+@function get($from, /* List */ $properties) {
+  $value: $from;
+  @each $property in $properties {
+    $value: map-get($value, $property);
+  }
+  @return $value;
+}
+
+@function random-color() {
+  $red: random(256)-1;
+  $green: random(256)-1;
+  $blue: random(256)-1;
+
+  @return rgb($red, $green, $blue);
+}

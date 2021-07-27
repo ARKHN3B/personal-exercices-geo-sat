@@ -1,0 +1,17 @@
+@import "src/config/theme/theme";
+@import "src/assets/scss/functions/functions";
+
+.header {
+  height: 70px;
+  box-sizing: border-box;
+
+  &__portal-area {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: get($theme, ("spacing", "sm"));
+    box-sizing: border-box;
+  }
+}

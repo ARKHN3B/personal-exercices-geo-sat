@@ -1,0 +1,30 @@
+.satellite-data-header {
+  &__render-btn {
+    position: relative;
+    padding-left: 2.4rem;
+    text-transform: uppercase;
+
+    .satellite-data-header__inline-logo-container {
+      transform: rotate(180deg);
+      position: absolute;
+      left: 0;
+      width: 2.8rem;
+      height: 2.8rem;
+      top: -6px;
+    }
+  }
+
+  &--hidden-mode {
+    .satellite-data-header__render-btn {
+      padding-right: 2.4rem;
+      padding-left: 1.3rem;
+    }
+
+    .satellite-data-header__inline-logo-container {
+      transform: rotate(0deg);
+      right: 0;
+      left: unset;
+      top: -5px;
+    }
+  }
+}

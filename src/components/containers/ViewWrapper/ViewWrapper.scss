@@ -1,0 +1,45 @@
+@import "src/config/theme/theme";
+@import "src/assets/scss/functions/functions";
+@import "src/assets/scss/mixins/mixins";
+
+.view-wrapper {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 80px 1fr auto;
+  grid-auto-rows: 70px 1fr;
+  grid-template-areas: "company-logo header split-pane"
+                       "navbar content split-pane";
+
+  &__company-logo {
+    grid-area: company-logo;
+    width: 50%;
+    margin-inline: auto;
+    cursor: pointer;
+  }
+
+  &__header {
+    grid-area: header;
+  }
+
+  &__company-logo,
+  &__header {
+    box-shadow: 0 1px 0 0 get($theme, ("palette", "border", "box-shadow"));
+  }
+
+  &__navbar {
+    grid-area: navbar;
+    box-shadow: 1px 0 0 0 get($theme, ("palette", "border", "box-shadow"));
+  }
+
+  &__content {
+    grid-area: content;
+    min-height: 100%;
+    overflow: auto;
+    background-color: get($theme, ("palette", "background", "default"));
+    box-sizing: border-box;
+  }
+
+  &__split-pane {
+    grid-area: split-pane;
+  }
+}

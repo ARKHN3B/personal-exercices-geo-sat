@@ -1,0 +1,11 @@
+@import "src/config/theme/theme";
+@import "src/assets/scss/functions/functions";
+
+.card {
+  background-color: #FFF;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 15px;
+  margin: 15px;
+  border: 1px solid get($theme, ("palette", "border", "default"));
+}

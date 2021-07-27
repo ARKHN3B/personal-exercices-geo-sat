@@ -1,0 +1,27 @@
+.split-pane-wrapper {
+  height: 100%;
+
+  &--col {
+    display: flex;
+  }
+
+  &--row {
+    width: 100%;
+  }
+
+  &--hide {
+    display: none;
+  }
+
+  .split-pane {
+    &--col {
+      height: 100%;
+      width: 140px;
+    }
+
+    &--row {
+      width: 100%;
+      height: 140px;
+    }
+  }
+}

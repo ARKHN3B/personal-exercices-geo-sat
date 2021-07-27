@@ -1,0 +1,62 @@
+@mixin h-w-max-percent {
+  height: 100%;
+  width: 100%;
+}
+
+@mixin d-flex-fully-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin d-flex-centered-end {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+@mixin border-top-radius($radius) {
+  border-top-left-radius: $radius;
+  border-top-right-radius: $radius;
+}
+
+@mixin border-bottom-radius($radius) {
+  border-bottom-left-radius: $radius;
+  border-bottom-right-radius: $radius;
+}
+
+@mixin equalHeightWidth($size, $important: false) {
+  @if($important) {
+    width: $size !important;
+    height: $size !important;
+  }
+  @else {
+    width: $size;
+    height: $size;
+  }
+}
+
+@mixin setWidthHeight($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin initAnimatedBackground($color-start, $color-end) {
+  background: $color-start; // Old browsers
+  background: linear-gradient(to left, $color-start 50%, $color-end 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
+
+@mixin revealAnimatedBackground($transition-delay: 0.3s) {
+  @keyframes backgroundPosition {
+    from {
+      background-position: right bottom;
+    }
+    to {
+      background-position: left bottom;
+    }
+  }
+  animation: $transition-delay ease 0s 1 backgroundPosition;
+  animation-fill-mode: forwards;
+}
